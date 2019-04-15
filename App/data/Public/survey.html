@@ -17,7 +17,6 @@
       rel="stylesheet"
     />
  
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -104,20 +103,20 @@
           Which of these words best describes you
         </h3>
         <p>
-          <input type="radio" name = "3"  id="1" />relaxed
+          <input type="radio" name = "3"  id="1" value="1"/>relaxed
         </p>
-        <p><input type="radio" name = "3"  id="2" />Social</p>
+        <p><input type="radio" name = "3"  id="2" value="2" />Social</p>
         <p>
           <input
            
             type="radio"
             id="3"
             name = "3" 
-            
+            value="3" 
           />Pressured
         </p>
         <p>
-          <input  type="radio" id="4" name = "3"  />Strong
+          <input  type="radio" id="4" name = "3" value="4"   />Strong
         </p>
       </div>
     </div>
@@ -128,14 +127,14 @@
          Would you say you are more spontaneous
         </h3>
         <p>
-          <input  type="radio" id="1" />Strongly Agree
+          <input  type="radio" id="1"  name = "3" value="1"  />Strongly Agree
         </p>
         <p>
-          <input type="radio" id="2" />Agree
+          <input type="radio" id="2"  value="2" />Agree
         </p>
-        <p><input  type="radio" id="3" />Disagree</p>
+        <p><input  type="radio" id="3"  value="3" />Disagree</p>
         <p>
-          <input type="radio" id="4" />Strongly Disagree
+          <input type="radio" id="4"  value="4" />Strongly Disagree
         </p>
       </div>
       <div class="col-sm-4" style="color: white; font-family: 'Indie Flower', cursive;  text-align: center;">
@@ -271,10 +270,16 @@
   margin: 15% auto; 
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
-  text-align: center;
-"> 
-    <p>Some text in the Modal..</p>
+  width: 30%;
+
+"> <p style="text-align: center;">Your perfect match:</p>
+    <p style="text-align:center;">is me</p>
+    <img
+    style="border-radius: 50%; border: solid; border-color: white; text-align: center; margin-right: 100px;"
+    src="../../Images/Screenshot 2019-02-14 at 20.21.03.png"
+    alt="Italian Trulli"
+    width="30%"
+  />
   </div>
   </div>
 
@@ -322,14 +327,12 @@
 
 
 $("#submit").on("click", function(){
-  var selectionOne = document.getElementsByName("1");
-
-  console.log(selectionOne.value);
-
-})
-
-
-
+  var selections = document.getElementsByName("1");
+  console.log(selections[0].value);
+  console.log(selections[1].value);
+  console.log(selections[2].value);
+  console.log(selections[3].value);
+ 
 
          //modal
          // Get the modal
@@ -351,8 +354,9 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-  
-     
+});
+    
+
      </script>
   </body>
   </html>

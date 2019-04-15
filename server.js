@@ -1,5 +1,5 @@
 var express = require("express");
-var $ = require("jquery");
+
 // Sets up the Express App
 // =============================================================
 var app = express();
